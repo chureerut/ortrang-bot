@@ -50,7 +50,7 @@ exports.index = async (req, res, next) => {
           if (detail.data.status === false) {
             ReplyRegister(
               replyToken,
-              "ไม่พบข้อมูลค่ะ \n กรุณาลงทะเบียนก่อนค่ะ"
+              "ไม่พบข้อมูลค่ะ \n กรุณาลงทะเบียนก่อนนะคะ \udbc0\udc90"
             );
           } else {
             ReplyContent(replyToken);
@@ -72,7 +72,7 @@ exports.index = async (req, res, next) => {
           if (detail.data.status === false) {
             ReplyRegister(
               replyToken,
-              "ไม่พบข้อมูลค่ะ \n กรุณาลงทะเบียนก่อนค่ะ"
+              "ไม่พบข้อมูลค่ะ \n กรุณาลงทะเบียนก่อนนะคะ \udbc0\udc90"
             );
           } else {
             Replyofficer(replyToken);
