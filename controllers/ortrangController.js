@@ -193,36 +193,47 @@ exports.index = async (req, res, next) => {
       req.body.events[0].postback.data === "เด็กหญิง" ||
       req.body.events[0].postback.data === "เด็กชาย"
     ) {
-      const bodyJSON = {
-        prefixes: req.body.events[0].postback.data,
-        name: "",
-        gender: "",
-        age: "",
-        birthday: "",
-        address: "",
-        tel: "",
-        rights: "",
-        telcontact: "",
-        status: false,
-        lineid: useridline,
-        linename: "",
-        step: "1",
-      };
-
-      request({
-        method: "POST",
-        uri: `${URL_API}/users`,
-        headers: {
-          "Content-Type": "application/json",
+      request(
+        {
+          method: "GET",
+          uri: `https://api.line.me/v2/bot/profile//${useridline}`,
+          headers: LINE_HEADER,
         },
-        body: JSON.stringify(bodyJSON),
-      }).then((response) => {
-        const step1 = JSON.parse(response);
-        console.log("STEP1", step1);
-        if (step1.status === "OK") {
-          ReplyName(replyToken);
+        (err, res, body) => {
+          const detail = JSON.parse(body);
+          const bodyJSON = {
+            prefixes: req.body.events[0].postback.data,
+            name: "",
+            gender: "",
+            age: "",
+            birthday: "",
+            address: "",
+            tel: "",
+            rights: "",
+            telcontact: "",
+            status: false,
+            lineid: useridline,
+            linename: detail.displayName,
+            lineimg: detail.pictureUrl,
+            step: "1",
+          };
+
+          request({
+            method: "POST",
+            uri: `${URL_API}/users`,
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(bodyJSON),
+          }).then((response) => {
+            const step1 = JSON.parse(response);
+            console.log("STEP1", step1);
+            if (step1.status === "OK") {
+              ReplyName(replyToken);
+            }
+          });
         }
-      });
+      );
     } else if (
       req.body.events[0].postback.data === "ชาย" ||
       req.body.events[0].postback.data === "หญิง"
@@ -421,6 +432,7 @@ const setToUpdateDB = async (
     status,
     lineid,
     linename,
+    lineimg,
     step,
   } = body;
 
@@ -439,7 +451,8 @@ const setToUpdateDB = async (
       telcontact: "",
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "2",
     };
   } else if (stepname === "2") {
@@ -456,7 +469,8 @@ const setToUpdateDB = async (
       telcontact: "",
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "3",
     };
   } else if (stepname === "3") {
@@ -473,7 +487,8 @@ const setToUpdateDB = async (
       telcontact: "",
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "4",
     };
   } else if (stepname === "4") {
@@ -490,7 +505,8 @@ const setToUpdateDB = async (
       telcontact: "",
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "5",
     };
   } else if (stepname === "5") {
@@ -507,7 +523,8 @@ const setToUpdateDB = async (
       telcontact: "",
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "6",
     };
   } else if (stepname === "6") {
@@ -524,7 +541,8 @@ const setToUpdateDB = async (
       telcontact: "",
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "7",
     };
   } else if (stepname === "7") {
@@ -541,7 +559,8 @@ const setToUpdateDB = async (
       telcontact: "",
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "8",
     };
   } else if (stepname === "8") {
@@ -558,7 +577,8 @@ const setToUpdateDB = async (
       telcontact: textupdate,
       status: status,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "9",
     };
   } else if (stepname === "9") {
@@ -575,7 +595,8 @@ const setToUpdateDB = async (
       telcontact: telcontact,
       status: true,
       lineid: useridline,
-      linename: "",
+      linename: linename,
+      lineimg: lineimg,
       step: "10",
     };
   }
@@ -1371,6 +1392,8 @@ function ReplyTelContact(replyToken) {
 }
 
 function ReplyDetailRegister(replyToken, data) {
+  console.log("สำเร็จ", data);
+
   const datebirthday = new Date(data.birthday);
 
   let month = datebirthday.getMonth() + 1; // 11
@@ -1391,6 +1414,29 @@ function ReplyDetailRegister(replyToken, data) {
           contents: [
             {
               type: "bubble",
+              direction: "ltr",
+              header: {
+                type: "box",
+                layout: "vertical",
+                contents: [
+                  {
+                    type: "text",
+                    text: "ข้อมูลการลงทะเบียน",
+                    weight: "bold",
+                    size: "md",
+                    color: "#1469DCFF",
+                    align: "center",
+                    contents: [],
+                  },
+                ],
+              },
+              hero: {
+                type: "image",
+                url: data.lineimg,
+                size: "full",
+                aspectRatio: "1.51:1",
+                aspectMode: "fit",
+              },
               body: {
                 type: "box",
                 layout: "vertical",
@@ -1398,18 +1444,15 @@ function ReplyDetailRegister(replyToken, data) {
                 margin: "none",
                 contents: [
                   {
-                    type: "text",
-                    text: "ข้อมูลการลงทะเบียน",
-                    size: "md",
-                    weight: "bold",
-                    color: "#057DDF",
-                    align: "center",
-                    wrap: true,
-                  },
-                  {
                     type: "box",
                     layout: "vertical",
                     contents: [
+                      {
+                        type: "text",
+                        text: "line name : " + data.linename,
+                        color: "#467EAC",
+                        wrap: true,
+                      },
                       {
                         type: "text",
                         text: "คำนำหน้าชื่อ : " + data.prefixes,
@@ -1662,7 +1705,7 @@ function ReplyContent2(replyToken) {
               imageBackgroundColor: "#0F86D8",
               thumbnailImageUrl:
                 "https://www.vejthani.com/wp-content/uploads/2021/01/How-Life-is-AW_-When-there-is-no-gallbladder-2021.jpg",
-            }
+            },
           ],
         },
       },
