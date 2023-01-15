@@ -31,7 +31,7 @@ exports.index = async (req, res, next) => {
           if (detail.data.status === false) {
             ReplyPrefixes(replyToken);
           } else {
-            ReplyRegister(replyToken, "เคยมีการลงทะเบียนแล้วค่ะ");
+            ReplyRegister(replyToken, "เคยมีการลงทะเบียนแล้วค่ะ \udbc0\udcb3");
           }
         }
       );
@@ -308,7 +308,7 @@ exports.index = async (req, res, next) => {
           if (detail.data.status === false) {
             setToDeleteDB(replyToken, detail.data);
           } else {
-            ReplyRegister(replyToken, "เคยมีการลงทะเบียนแล้วค่ะ");
+            ReplyRegister(replyToken, "เคยมีการลงทะเบียนแล้วค่ะ \udbc0\udcb3");
           }
         }
       );
