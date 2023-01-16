@@ -93,12 +93,13 @@ exports.index = async (req, res, next) => {
         },
         (err, res, body) => {
           const detail = JSON.parse(body);
+          const telsub = req.body.events[0].message.text.substring(1);
           setToUpdateDB(
             detail.data.step,
             useridline,
             detail.data,
             replyToken,
-            req.body.events[0].message.text
+            telsub
           );
         }
       );
@@ -116,12 +117,13 @@ exports.index = async (req, res, next) => {
         },
         (err, res, body) => {
           const detail = JSON.parse(body);
+          const addresssub = req.body.events[0].message.text.substring(1); 
           setToUpdateDB(
             detail.data.step,
             useridline,
             detail.data,
             replyToken,
-            req.body.events[0].message.text
+            addresssub
           );
         }
       );
@@ -139,12 +141,13 @@ exports.index = async (req, res, next) => {
         },
         (err, res, body) => {
           const detail = JSON.parse(body);
+          const contactsub = req.body.events[0].message.text.substring(2);
           setToUpdateDB(
             detail.data.step,
             useridline,
             detail.data,
             replyToken,
-            req.body.events[0].message.text
+            contactsub
           );
         }
       );
@@ -157,7 +160,9 @@ exports.index = async (req, res, next) => {
       req.body.events[0].message.text.substring(0, 1) !== "H" ||
       req.body.events[0].message.text.substring(0, 1) !== "h" ||
       req.body.events[0].message.text.substring(0, 2) !== "CT" ||
-      req.body.events[0].message.text.substring(0, 2) !== "ct"
+      req.body.events[0].message.text.substring(0, 2) !== "ct" ||
+      req.body.events[0].message.text.substring(0, 2) !== "Ct" ||
+      req.body.events[0].message.text.substring(0, 2) !== "cT"
     ) {
       //gender
       request(
