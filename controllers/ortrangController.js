@@ -1660,7 +1660,7 @@ function ReplyContent2(replyToken) {
               direction: "rtl",
               hero: {
                 type: "image",
-                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu1.jpg",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu11.jpg",
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
@@ -1676,7 +1676,7 @@ function ReplyContent2(replyToken) {
               direction: "ltr",
               hero: {
                 type: "image",
-                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu2.jpg",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu22.jpg",
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
@@ -1692,7 +1692,7 @@ function ReplyContent2(replyToken) {
               direction: "ltr",
               hero: {
                 type: "image",
-                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu3.jpg",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu33.jpg",
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
@@ -1708,7 +1708,7 @@ function ReplyContent2(replyToken) {
               direction: "ltr",
               hero: {
                 type: "image",
-                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu4.jpg",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu44.jpg",
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
