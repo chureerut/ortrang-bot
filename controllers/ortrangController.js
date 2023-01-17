@@ -1657,28 +1657,18 @@ function ReplyContent2(replyToken) {
           contents: [
             {
               type: "bubble",
-              direction: "ltr",
+              direction: "rtl",
               hero: {
                 type: "image",
                 url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu1.jpg",
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
-              },
-              footer: {
-                type: "box",
-                layout: "horizontal",
-                contents: [
-                  {
-                    type: "button",
-                    action: {
-                      type: "uri",
-                      label: "คลิกที่นี่",
-                      uri: "https://docs.google.com/presentation/d/1ROjKMayHAtDr74utcyEgc7BFiiNAEwTM_wQ3KFb_WzE/edit?usp=sharing",
-                    },
-                    color: "#02C3C2FF",
-                  },
-                ],
+                action: {
+                  type: "uri",
+                  label: "คลิกที่นี่",
+                  uri: "https://docs.google.com/presentation/d/1ROjKMayHAtDr74utcyEgc7BFiiNAEwTM_wQ3KFb_WzE/edit?usp=sharing",
+                },
               },
             },
             {
@@ -1690,21 +1680,11 @@ function ReplyContent2(replyToken) {
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
-              },
-              footer: {
-                type: "box",
-                layout: "horizontal",
-                contents: [
-                  {
-                    type: "button",
-                    action: {
-                      type: "uri",
-                      label: "คลิกที่นี่",
-                      uri: "https://docs.google.com/presentation/d/1mFd0XAiR5VzCS5DaeS55dNNHm4Ecg13HwJKnJj0Pgyg/edit?usp=sharing",
-                    },
-                    color: "#02C3C2FF",
-                  },
-                ],
+                action: {
+                  type: "uri",
+                  label: "คลิกที่นี่",
+                  uri: "https://docs.google.com/presentation/d/1mFd0XAiR5VzCS5DaeS55dNNHm4Ecg13HwJKnJj0Pgyg/edit?usp=sharing",
+                },
               },
             },
             {
@@ -1716,21 +1696,11 @@ function ReplyContent2(replyToken) {
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
-              },
-              footer: {
-                type: "box",
-                layout: "horizontal",
-                contents: [
-                  {
-                    type: "button",
-                    action: {
-                      type: "uri",
-                      label: "คลิกที่นี่",
-                      uri: "https://docs.google.com/presentation/d/1spBj3NFmlqqC6x6nvDGeRJeLhCuKFdJwcsko7Fux4Oo/edit?usp=sharing",
-                    },
-                    color: "#02C3C2FF",
-                  },
-                ],
+                action: {
+                  type: "uri",
+                  label: "คลิกที่นี่",
+                  uri: "https://docs.google.com/presentation/d/1spBj3NFmlqqC6x6nvDGeRJeLhCuKFdJwcsko7Fux4Oo/edit?usp=sharing",
+                },
               },
             },
             {
@@ -1742,21 +1712,11 @@ function ReplyContent2(replyToken) {
                 size: "full",
                 aspectRatio: "1.51:1",
                 aspectMode: "fit",
-              },
-              footer: {
-                type: "box",
-                layout: "horizontal",
-                contents: [
-                  {
-                    type: "button",
-                    action: {
-                      type: "uri",
-                      label: "คลิกที่นี่",
-                      uri: "https://docs.google.com/presentation/d/18tgTD3CeO6eqbNP09P8s9ti4TEU6oc7vvEXb8WELkow/edit?usp=sharing",
-                    },
-                    color: "#02C3C2FF",
-                  },
-                ],
+                action: {
+                  type: "uri",
+                  label: "คลิกที่นี่",
+                  uri: "https://docs.google.com/presentation/d/18tgTD3CeO6eqbNP09P8s9ti4TEU6oc7vvEXb8WELkow/edit?usp=sharing",
+                },
               },
             },
           ],
