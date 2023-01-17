@@ -1650,185 +1650,117 @@ function ReplyContent2(replyToken) {
     replyToken: replyToken,
     messages: [
       {
-        type: "template",
-        altText: "this is a carousel template",
-        template: {
+        type: "flex",
+        altText: "Flex Message",
+        contents: {
           type: "carousel",
-          columns: [
+          contents: [
             {
-              title: "การผ่าตัดถุงน้ำดี",
-              text: "การผ่าตัดถุงน้ำดีโดยใช้กล้อง Laparoscopic  Cholecystectomy",
-              actions: [
-                {
-                  type: "uri",
-                  label: "คลิกที่นี่",
-                  uri: "https://docs.google.com/presentation/d/1ROjKMayHAtDr74utcyEgc7BFiiNAEwTM_wQ3KFb_WzE/edit?usp=sharing",
-                },
-              ],
-              imageBackgroundColor: "#0F86D8",
-              thumbnailImageUrl:
-                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu1.jpg",
+              type: "bubble",
+              direction: "ltr",
+              hero: {
+                type: "image",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu1.jpg",
+                size: "full",
+                aspectRatio: "1.51:1",
+                aspectMode: "fit",
+              },
+              footer: {
+                type: "box",
+                layout: "horizontal",
+                contents: [
+                  {
+                    type: "button",
+                    action: {
+                      type: "uri",
+                      label: "คลิกที่นี่",
+                      uri: "https://docs.google.com/presentation/d/1ROjKMayHAtDr74utcyEgc7BFiiNAEwTM_wQ3KFb_WzE/edit?usp=sharing",
+                    },
+                    color: "#02C3C2FF",
+                  },
+                ],
+              },
             },
             {
-              title: "การปฏิบัติตัวผู้ป่วยก่อนผ่าตัดถุงน้ำดี",
-              text: "การผ่าตัดถุงน้ำดีโดยใช้กล้อง Laparoscopic  Cholecystectomy",
-              actions: [
-                {
-                  type: "uri",
-                  label: "คลิกที่นี่",
-                  uri: "https://docs.google.com/presentation/d/1mFd0XAiR5VzCS5DaeS55dNNHm4Ecg13HwJKnJj0Pgyg/edit?usp=sharing",
-                },
-              ],
-              imageBackgroundColor: "#0F86D8",
-              thumbnailImageUrl:
-                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu2.jpg",
+              type: "bubble",
+              direction: "ltr",
+              hero: {
+                type: "image",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu2.jpg",
+                size: "full",
+                aspectRatio: "1.51:1",
+                aspectMode: "fit",
+              },
+              footer: {
+                type: "box",
+                layout: "horizontal",
+                contents: [
+                  {
+                    type: "button",
+                    action: {
+                      type: "uri",
+                      label: "คลิกที่นี่",
+                      uri: "https://docs.google.com/presentation/d/1mFd0XAiR5VzCS5DaeS55dNNHm4Ecg13HwJKnJj0Pgyg/edit?usp=sharing",
+                    },
+                    color: "#02C3C2FF",
+                  },
+                ],
+              },
             },
             {
-              title: "การปฏิบัติตัวผู้ป่วยหลังผ่าตัดถุงน้ำดี",
-              text: "การผ่าตัดถุงน้ำดีโดยใช้กล้อง Laparoscopic  CholecystectoText",
-              actions: [
-                {
-                  type: "uri",
-                  label: "คลิกที่นี่",
-                  uri: "https://docs.google.com/presentation/d/1spBj3NFmlqqC6x6nvDGeRJeLhCuKFdJwcsko7Fux4Oo/edit?usp=sharing",
-                },
-              ],
-              imageBackgroundColor: "#0F86D8",
-              thumbnailImageUrl:
-                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu3.jpg",
+              type: "bubble",
+              direction: "ltr",
+              hero: {
+                type: "image",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu3.jpg",
+                size: "full",
+                aspectRatio: "1.51:1",
+                aspectMode: "fit",
+              },
+              footer: {
+                type: "box",
+                layout: "horizontal",
+                contents: [
+                  {
+                    type: "button",
+                    action: {
+                      type: "uri",
+                      label: "คลิกที่นี่",
+                      uri: "https://docs.google.com/presentation/d/1spBj3NFmlqqC6x6nvDGeRJeLhCuKFdJwcsko7Fux4Oo/edit?usp=sharing",
+                    },
+                    color: "#02C3C2FF",
+                  },
+                ],
+              },
             },
             {
-              title: "การปฏิบัติเมื่อกลับบ้าน",
-              text: "การผ่าตัดถุงน้ำดีโดยใช้กล้อง Laparoscopic  CholecystectoText",
-              actions: [
-                {
-                  type: "uri",
-                  label: "คลิกที่นี่",
-                  uri: "https://docs.google.com/presentation/d/18tgTD3CeO6eqbNP09P8s9ti4TEU6oc7vvEXb8WELkow/edit?usp=sharing",
-                },
-              ],
-              imageBackgroundColor: "#0F86D8",
-              thumbnailImageUrl:
-                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu4.jpg",
+              type: "bubble",
+              direction: "ltr",
+              hero: {
+                type: "image",
+                url: "https://gleaming-sandals-lamb.cyclic.app/images/listmenu4.jpg",
+                size: "full",
+                aspectRatio: "1.51:1",
+                aspectMode: "fit",
+              },
+              footer: {
+                type: "box",
+                layout: "horizontal",
+                contents: [
+                  {
+                    type: "button",
+                    action: {
+                      type: "uri",
+                      label: "คลิกที่นี่",
+                      uri: "https://docs.google.com/presentation/d/18tgTD3CeO6eqbNP09P8s9ti4TEU6oc7vvEXb8WELkow/edit?usp=sharing",
+                    },
+                    color: "#02C3C2FF",
+                  },
+                ],
+              },
             },
           ],
         },
-        // type: "flex",
-        // altText: "Flex Message",
-        // contents: {
-        //   type: "carousel",
-        //   contents: [
-        //     {
-        //       type: "carousel",
-        //       contents: [
-        //         {
-        //           type: "bubble",
-        //           direction: "ltr",
-        //           hero: {
-        //             type: "image",
-        //             url: "https://breakable-loafers-dog.cyclic.app/images/listmenu1.jpg",
-        //             size: "full",
-        //             aspectRatio: "1.51:1",
-        //             aspectMode: "fit",
-        //           },
-        //           footer: {
-        //             type: "box",
-        //             layout: "horizontal",
-        //             contents: [
-        //               {
-        //                 type: "button",
-        //                 action: {
-        //                   type: "uri",
-        //                   label: "คลิกที่นี่",
-        //                   uri: "https://docs.google.com/presentation/d/1ROjKMayHAtDr74utcyEgc7BFiiNAEwTM_wQ3KFb_WzE/edit?usp=sharing",
-        //                 },
-        //                 color: "#02C3C2FF",
-        //               },
-        //             ],
-        //           },
-        //         },
-        //         {
-        //           type: "bubble",
-        //           direction: "ltr",
-        //           hero: {
-        //             type: "image",
-        //             url: "https://breakable-loafers-dog.cyclic.app/images/listmenu2.jpg",
-        //             size: "full",
-        //             aspectRatio: "1.51:1",
-        //             aspectMode: "fit",
-        //           },
-        //           footer: {
-        //             type: "box",
-        //             layout: "horizontal",
-        //             contents: [
-        //               {
-        //                 type: "button",
-        //                 action: {
-        //                   type: "uri",
-        //                   label: "คลิกที่นี่",
-        //                   uri: "https://docs.google.com/presentation/d/1mFd0XAiR5VzCS5DaeS55dNNHm4Ecg13HwJKnJj0Pgyg/edit?usp=sharing",
-        //                 },
-        //                 color: "#02C3C2FF",
-        //               },
-        //             ],
-        //           },
-        //         },
-        //         {
-        //           type: "bubble",
-        //           direction: "ltr",
-        //           hero: {
-        //             type: "image",
-        //             url: "https://breakable-loafers-dog.cyclic.app/images/listmenu3.jpg",
-        //             size: "full",
-        //             aspectRatio: "1.51:1",
-        //             aspectMode: "fit",
-        //           },
-        //           footer: {
-        //             type: "box",
-        //             layout: "horizontal",
-        //             contents: [
-        //               {
-        //                 type: "button",
-        //                 action: {
-        //                   type: "uri",
-        //                   label: "คลิกที่นี่",
-        //                   uri: "https://docs.google.com/presentation/d/1spBj3NFmlqqC6x6nvDGeRJeLhCuKFdJwcsko7Fux4Oo/edit?usp=sharing",
-        //                 },
-        //                 color: "#02C3C2FF",
-        //               },
-        //             ],
-        //           },
-        //         },
-        //         {
-        //           type: "bubble",
-        //           direction: "ltr",
-        //           hero: {
-        //             type: "image",
-        //             url: "https://breakable-loafers-dog.cyclic.app/images/listmenu4.jpg",
-        //             size: "full",
-        //             aspectRatio: "1.51:1",
-        //             aspectMode: "fit",
-        //           },
-        //           footer: {
-        //             type: "box",
-        //             layout: "horizontal",
-        //             contents: [
-        //               {
-        //                 type: "button",
-        //                 action: {
-        //                   type: "uri",
-        //                   label: "คลิกที่นี่",
-        //                   uri: "https://docs.google.com/presentation/d/18tgTD3CeO6eqbNP09P8s9ti4TEU6oc7vvEXb8WELkow/edit?usp=sharing",
-        //                 },
-        //                 color: "#02C3C2FF",
-        //               },
-        //             ],
-        //           },
-        //         },
-        //       ],
-        //     },
-        //   ],
-        // },
       },
     ],
   });
