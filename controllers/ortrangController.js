@@ -1667,7 +1667,7 @@ function ReplyContent2(replyToken) {
               ],
               imageBackgroundColor: "#0F86D8",
               thumbnailImageUrl:
-                "https://breakable-loafers-dog.cyclic.app/images/listmenu1.jpg",
+                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu1.jpg",
             },
             {
               title: "การปฏิบัติตัวผู้ป่วยก่อนผ่าตัดถุงน้ำดี",
@@ -1681,7 +1681,7 @@ function ReplyContent2(replyToken) {
               ],
               imageBackgroundColor: "#0F86D8",
               thumbnailImageUrl:
-                "https://breakable-loafers-dog.cyclic.app/images/listmenu2.jpg",
+                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu2.jpg",
             },
             {
               title: "การปฏิบัติตัวผู้ป่วยหลังผ่าตัดถุงน้ำดี",
@@ -1695,7 +1695,7 @@ function ReplyContent2(replyToken) {
               ],
               imageBackgroundColor: "#0F86D8",
               thumbnailImageUrl:
-                "https://breakable-loafers-dog.cyclic.app/images/listmenu3.jpg",
+                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu3.jpg",
             },
             {
               title: "การปฏิบัติเมื่อกลับบ้าน",
@@ -1709,7 +1709,7 @@ function ReplyContent2(replyToken) {
               ],
               imageBackgroundColor: "#0F86D8",
               thumbnailImageUrl:
-                "https://breakable-loafers-dog.cyclic.app/images/listmenu4.jpg",
+                "https://gleaming-sandals-lamb.cyclic.app/images/listmenu4.jpg",
             },
           ],
         },
